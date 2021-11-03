@@ -1,0 +1,33 @@
+.container
+{
+    display: flex;
+}
+#email,#password,h4,#login,#emailsign,#passwordsign,#signin,h3,#conpasswordsign
+{
+    margin-left: 20px;
+}
+#email,#password,#emailsign,#passwordsign,#conpasswordsign
+{
+    width: 350px;
+    height: 25px;
+}
+.signindiv,.Logindiv
+{
+    border: 3px solid palevioletred;
+    border-radius: 5px;
+    width: 400px;
+    height: 400px;
+    margin-top: 10%;
+}
+.Logindiv
+{
+    margin-left: 20%; 
+}
+.signindiv
+{
+    margin-left: 5%; 
+}
+input[type=button]
+{
+    font-size: 15px;
+}
