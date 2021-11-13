@@ -28,7 +28,7 @@
     } 
     if($flag == 1){
         setcookie($email, $conpass, time() + (86400), "/");
-       echo "<script> window.location.href='http://localhost/Bike%20project/service.html'; </script>";
+       echo "<script> window.location.href='../service.html'; </script>";
     }
     else
     {
