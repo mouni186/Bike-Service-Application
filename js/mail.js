@@ -1,7 +1,10 @@
 function getName() {
-    let gmailBox = document.getElementById("gmail").value;
-    let name = document.cookie;
-    gmailBox.value = //cooki name by array value [1]
+    let gmailBox = document.getElementById("gmail");
+    let user = document.cookie;
+    let userSplit = user.split("=");
+    let userMail = userSplit[0];
+
+    gmailBox.value = userMail;
 }
 
 function mail()

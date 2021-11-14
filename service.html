@@ -9,10 +9,12 @@
     <title>Document</title>
 </head>
 
-<body>
-    <!-- <form action="php/servicetype.php" method="POST"> -->
+<body onload="getName();">
+    <form action="php/servicetype.php" method="POST">
 
-        <input type="date" id="date" name="date">
+        <input type="date" id="date" name="date"><br><br>
+
+        Bike Number <input type="text" id="bikenumber" name="bikenumber"><br><br>
 
         <input type="radio" id="oil" name="service" value="Oil">
         <label for="oil">1: Oil</label><br>
@@ -21,13 +23,13 @@
         <label for="water">2: Water</label><br>
 
         <input type="radio" id="general" name="service" value="General">
-        <label for="general">3: General </label>
-<input type="text" hidden id="gmail" name="gmail">
-        <h2>dhjkshk</h2>
+        <label for="general">3: General </label><br><br>
+
+        <input type="text" id="gmail" hidden name="gmail">
 
         <input type="submit" onclick="mail();">
 
-    <!-- </form> -->
+    </form>
 </body>
 
 </html>
