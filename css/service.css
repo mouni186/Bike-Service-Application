@@ -1,0 +1,43 @@
+body
+{
+    padding: 0;
+    margin: 0;
+}
+
+.service
+{
+    padding-top: 10px;
+    padding-left: 20px;
+    border: 3px solid rgb(127, 82, 248);
+    border-radius: 5px;
+    width: 350px;
+    height: 370px;
+    margin-top: 5%;
+    margin-left: 35%;
+}
+
+a:link, a:visited {
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    background-color: #a38bfa;
+    margin-top: 20px;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: rgb(174, 161, 250);
+  }
+
+  #logout{
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    position:fixed;
+    left:15%;
+    top:23px;
+    width: 70px;
+    height: 30px;
+    background-color: rgb(110, 250, 250);
+    border: none;
+ }

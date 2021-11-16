@@ -29,12 +29,13 @@
     $sql = "UPDATE bookings SET bikestatus = bikestatus + 1 WHERE serviceid = '$id'";
     if($conn->query($sql) == TRUE)
     {
-        echo "<script>alert('Moved To Start State')</script>";
+        echo "<script>alert('Moved To Delivered State')</script>";
         echo "<script>window.location.href='http://localhost/Bike-App/admin.html';</script>";
     }
     else
     {
-        echo "<script>alert('Can't Modify')</script>";
+        echo "<script>alert('Can't Modify')
+        </script>";
     }
 
 ?>

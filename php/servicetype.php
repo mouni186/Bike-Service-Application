@@ -31,7 +31,10 @@
 
     if ($conn->multi_query($sql) === TRUE) 
     {
-        echo "Inserted";
+        echo "<script>alert('Service Booked');
+        window.history.go(-1);
+        
+        </script>";
     }
     else
     {

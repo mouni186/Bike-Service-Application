@@ -4,7 +4,7 @@ const nodeMailer = require('nodemailer');
 
 const app = express();
 
-app.get('/sendMail', (request, response) => {
+app.get('/sendMail', cors(), (request, response) => {
     console.log(request.query);
 
     // node mailer
@@ -16,13 +16,13 @@ app.get('/sendMail', (request, response) => {
         host: 'smtp.gmail.com',
         port: 587,
         auth: {
-            user: 'anishbalasachin13@gmail.com',
-            pass: 'jipsxicjskholjay'
+            user: '19mca008mounika.s@gmail.com',
+            pass: 'ouwkaismaiogyoqv'
         },
     })
     transporter.sendMail({
-        from: `"Anish" <anishbalasachin13@gmail.com>`, // host admin
-        to: 'jeyajeny1227@gmail.com',  // to admin
+        from: `"Mounika" <19mca008mounika.s@gmail.com>`, // host admin
+        to: '19mca008mounika.s@gmail.com',  // to admin
         subject: "New Service Booked",
         text: "new " + service + " service for " + userMail   //msg value
  
@@ -30,7 +30,30 @@ app.get('/sendMail', (request, response) => {
     console.log("Service End");
 
 })
+app.get('/Completed',cors(),(req,res) =>
+{
+    let usermailid = req.query.mail;
+    console.log(usermailid);
+    const transpoter = nodeMailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 587,
+        auth: {
+            user: '19mca008mounika.s@gmail.com',
+            pass: 'ouwkaismaiogyoqv'
+        },
+    })
+    transpoter.sendMail({
+        from:`"Mounika" <19mca008mounika.s@gmail.com>`,
+        to:usermailid,
+        subject:"service completed",
+        text:"your bike service is completed"
 
+    }).then(console.log("mail.sent")).catch(e => console.log((e)));
+    res.send("<script> alert('mail sended'); history.go(-1); </script>")
+
+
+
+})
 let port = 5000;
 
 app.listen(port, () => {

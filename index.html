@@ -9,28 +9,29 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <a href="http://localhost/Bike-App/adminlogin.html">Admin login</a>
     <div class="container">
         <div class="Logindiv">
+            
             <form action="php/login.php" method="POST">
-                <h3>LOGIN</h3>
+                <h3>USER LOGIN</h3>
                 <h4>EMail</h4>
-                <input type="text" id="email" name="EMail" required>
+                <input type="text" id="email" placeholder="Email" name="EMail" required autocomplete="off">
                 <h4>Password</h4>
-                <input type="password" id="password" name="Password" required><br><br>
+                <input type="password" id="password" placeholder="Password" name="Password" required><br><br>
                 <input type="submit" id="login" value="Login">
             </form>
         </div>
         
         <div class="signindiv">
-            <form action="php/signin.php" method="POST">
-                <h3>SIGNIN</h3>
+            <form action="php/signin.php" method="POST" autocomplete="off">
+                <h3>USER SIGNIN</h3>
                 <h4>EMail</h4>
-                <input type="text" id="emailsign" name="EMailsign" required>
+                <input type="text" id="emailsign" placeholder="Email" name="EMailsign" required>
                 <h4>Password</h4>
-                <input type="password" id="passwordsign" name="Passwordsign" required>
+                <input type="password" id="passwordsign" placeholder="Password" name="Passwordsign" required>
                 <h4>Confirm Password</h4>
-                <input type="password" id="conpasswordsign" name="Conpasswordsign" onkeyup="validate();" required><br><br>
+                <input type="password" id="conpasswordsign" placeholder="Confirm password" name="Conpasswordsign" onkeyup="validate();" required><br><br>
                 <input type="submit" id="signin" value="Signin">
             </form>
         </div>

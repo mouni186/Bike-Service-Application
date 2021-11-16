@@ -6,30 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/mail.js"></script>
+    <script src="js/custom.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="css/service.css">
 </head>
 
-<body onload="getName();">
-    <form action="php/servicetype.php" method="POST">
+<body onload="getName(); addToUrl();">
 
-        <input type="date" id="date" name="date"><br><br>
+    <a id="mail"  href="http://localhost/Bike-App/php/history.php?mail=">History</a>
 
-        Bike Number <input type="text" id="bikenumber" name="bikenumber"><br><br>
+    <a id="status"  href="http://localhost/Bike-App/php/status.php?mail=">Status</a><br><br> <input type="submit" onclick="logOut();" value="LogOut" id="logout">
+    <div class="service">
+        <form action="php/servicetype.php" id="myForm" method="POST" autocomplete="off">
 
-        <input type="radio" id="oil" name="service" value="Oil">
-        <label for="oil">1: Oil</label><br>
+            <h4>Select the Service date</h4>
+            <input type="date" id="date" name="date" onchange="previousDate();">
+    
+            <h4>Bike Number</h4> <input type="text" id="bikenumber" name="bikenumber">
+    
+            <h4>Select the Service</h4>
+            <input type="radio" id="oil" name="service" value="Oil" checked>
+            <label for="oil">1: Oil</label><br>
+    
+            <input type="radio" id="water" name="service" value="Water">
+            <label for="water">2: Water</label><br>
+    
+            <input type="radio" id="general" name="service" value="General">
+            <label for="general">3: General </label><br><br>
+    
+            <input type="text" id="gmail" hidden name="gmail">
+    
+            <input type="submit" onclick="mail();" onsubmit="previousDate();"><br><br>
+    
+        </form>
+    
 
-        <input type="radio" id="water" name="service" value="Water">
-        <label for="water">2: Water</label><br>
-
-        <input type="radio" id="general" name="service" value="General">
-        <label for="general">3: General </label><br><br>
-
-        <input type="text" id="gmail" hidden name="gmail">
-
-        <input type="submit" onclick="mail();">
-
-    </form>
+    </div>    
 </body>
 
 </html>

@@ -34,7 +34,9 @@
     }
     else
     {
-        echo "<script> alert('NO usere found'); </script>";
+        echo "<script> alert('NO usere found');
+        window.history.go(-1);
+        </script>";
     }
   
     $conn->close();
